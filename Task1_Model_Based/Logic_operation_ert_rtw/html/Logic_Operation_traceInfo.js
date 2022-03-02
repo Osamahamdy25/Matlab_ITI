@@ -1,0 +1,35 @@
+function RTW_rtwnameSIDMap() {
+	this.rtwnameHashMap = new Array();
+	this.sidHashMap = new Array();
+	this.rtwnameHashMap["<Root>"] = {sid: "Logic_Operation"};
+	this.sidHashMap["Logic_Operation"] = {rtwname: "<Root>"};
+	this.rtwnameHashMap["<Root>/AND"] = {sid: "Logic_Operation:1"};
+	this.sidHashMap["Logic_Operation:1"] = {rtwname: "<Root>/AND"};
+	this.rtwnameHashMap["<Root>/Constant"] = {sid: "Logic_Operation:9"};
+	this.sidHashMap["Logic_Operation:9"] = {rtwname: "<Root>/Constant"};
+	this.rtwnameHashMap["<Root>/Constant1"] = {sid: "Logic_Operation:10"};
+	this.sidHashMap["Logic_Operation:10"] = {rtwname: "<Root>/Constant1"};
+	this.rtwnameHashMap["<Root>/NOT"] = {sid: "Logic_Operation:5"};
+	this.sidHashMap["Logic_Operation:5"] = {rtwname: "<Root>/NOT"};
+	this.rtwnameHashMap["<Root>/NOT1"] = {sid: "Logic_Operation:6"};
+	this.sidHashMap["Logic_Operation:6"] = {rtwname: "<Root>/NOT1"};
+	this.rtwnameHashMap["<Root>/NOT2"] = {sid: "Logic_Operation:7"};
+	this.sidHashMap["Logic_Operation:7"] = {rtwname: "<Root>/NOT2"};
+	this.rtwnameHashMap["<Root>/OR"] = {sid: "Logic_Operation:2"};
+	this.sidHashMap["Logic_Operation:2"] = {rtwname: "<Root>/OR"};
+	this.rtwnameHashMap["<Root>/XOR"] = {sid: "Logic_Operation:3"};
+	this.sidHashMap["Logic_Operation:3"] = {rtwname: "<Root>/XOR"};
+	this.rtwnameHashMap["<Root>/Output"] = {sid: "Logic_Operation:11"};
+	this.sidHashMap["Logic_Operation:11"] = {rtwname: "<Root>/Output"};
+	this.rtwnameHashMap["<Root>/Output1"] = {sid: "Logic_Operation:12"};
+	this.sidHashMap["Logic_Operation:12"] = {rtwname: "<Root>/Output1"};
+	this.rtwnameHashMap["<Root>/Output2"] = {sid: "Logic_Operation:13"};
+	this.sidHashMap["Logic_Operation:13"] = {rtwname: "<Root>/Output2"};
+	this.rtwnameHashMap["<Root>/Output3"] = {sid: "Logic_Operation:14"};
+	this.sidHashMap["Logic_Operation:14"] = {rtwname: "<Root>/Output3"};
+	this.rtwnameHashMap["<Root>/Output4"] = {sid: "Logic_Operation:15"};
+	this.sidHashMap["Logic_Operation:15"] = {rtwname: "<Root>/Output4"};
+	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}
+	this.getRtwname = function(sid) { return this.sidHashMap[sid];}
+}
+RTW_rtwnameSIDMap.instance = new RTW_rtwnameSIDMap();

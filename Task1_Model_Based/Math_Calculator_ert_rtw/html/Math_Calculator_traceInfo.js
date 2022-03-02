@@ -1,0 +1,29 @@
+function RTW_rtwnameSIDMap() {
+	this.rtwnameHashMap = new Array();
+	this.sidHashMap = new Array();
+	this.rtwnameHashMap["<Root>"] = {sid: "Math_Calculator"};
+	this.sidHashMap["Math_Calculator"] = {rtwname: "<Root>"};
+	this.rtwnameHashMap["<Root>/Constant"] = {sid: "Math_Calculator:7"};
+	this.sidHashMap["Math_Calculator:7"] = {rtwname: "<Root>/Constant"};
+	this.rtwnameHashMap["<Root>/Constant2"] = {sid: "Math_Calculator:9"};
+	this.sidHashMap["Math_Calculator:9"] = {rtwname: "<Root>/Constant2"};
+	this.rtwnameHashMap["<Root>/Divide"] = {sid: "Math_Calculator:4"};
+	this.sidHashMap["Math_Calculator:4"] = {rtwname: "<Root>/Divide"};
+	this.rtwnameHashMap["<Root>/Product"] = {sid: "Math_Calculator:5"};
+	this.sidHashMap["Math_Calculator:5"] = {rtwname: "<Root>/Product"};
+	this.rtwnameHashMap["<Root>/Subtract"] = {sid: "Math_Calculator:6"};
+	this.sidHashMap["Math_Calculator:6"] = {rtwname: "<Root>/Subtract"};
+	this.rtwnameHashMap["<Root>/Sum"] = {sid: "Math_Calculator:1"};
+	this.sidHashMap["Math_Calculator:1"] = {rtwname: "<Root>/Sum"};
+	this.rtwnameHashMap["<Root>/Output"] = {sid: "Math_Calculator:11"};
+	this.sidHashMap["Math_Calculator:11"] = {rtwname: "<Root>/Output"};
+	this.rtwnameHashMap["<Root>/Output1"] = {sid: "Math_Calculator:12"};
+	this.sidHashMap["Math_Calculator:12"] = {rtwname: "<Root>/Output1"};
+	this.rtwnameHashMap["<Root>/Output2"] = {sid: "Math_Calculator:13"};
+	this.sidHashMap["Math_Calculator:13"] = {rtwname: "<Root>/Output2"};
+	this.rtwnameHashMap["<Root>/Output3"] = {sid: "Math_Calculator:14"};
+	this.sidHashMap["Math_Calculator:14"] = {rtwname: "<Root>/Output3"};
+	this.getSID = function(rtwname) { return this.rtwnameHashMap[rtwname];}
+	this.getRtwname = function(sid) { return this.sidHashMap[sid];}
+}
+RTW_rtwnameSIDMap.instance = new RTW_rtwnameSIDMap();
